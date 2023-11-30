@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <strong>{{ produto.nome }}</strong> - R$ {{ produto.preco }}<br>
+                {% if produto|instanceof('Camisa') %}
+                    Tamanhos: {{ produto.tamanho }}
+                {% elif produto|instanceof('Caneca') %}
+                    Capacidade: {{ produto.capacidade }} Litros
+                {% elif produto|instanceof('Quadrinho') %}
+                    Autor: {{ produto.autor }}, Editora: {{ produto.editora }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
