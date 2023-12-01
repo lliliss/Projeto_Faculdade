@@ -41,8 +41,3 @@ Cada produto, mesmo aqueles que fazem parte da promoção, possui seu próprio n
 
 O backend do projeto foi desenvolvido em Python, utilizando Flask como framework web. O frontend foi construído com Jinja2. A seguir, algumas imagens do projeto em produção:
 
-![Imagem 1]
-Legenda da imagem 1
-
-![Imagem 2]
-Legenda da imagem 2
